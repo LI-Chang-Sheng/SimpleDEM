@@ -9,16 +9,16 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 clear
 clc
-m  = 1;%Ğ¡ÇòÖÊÁ¿    mass
-r  = 1;%Ğ¡ÇòµÄ°ë¾¶  rad
-g  = -1;%ÖØÁ¦¼ÓËÙ¶È acceleration of gravity
-k  = 40;%µ¯»ÉµÄµ¯ĞÔÏµÊı stiffness
-t  = 0;%ÆğÊ¼Ê±¼ä inital time
-dt = 0.02;%µ¥Î»Ê±¼ä it is too big now, just for fun!
-v  = 0;%Ğ¡ÇòµÄ³õÊ¼ËÙ¶È disk's inital velocity
-y1 = 2;%Ğ¡ÇòµÄÆğÊ¼Î»ÖÃ disk's inital position
-y0 = 0;%µØÃæµÄÎ»ÖÃ ground
-viscous = 0;%Õ³ÖÍË¥¼õÏµÊı
+m  = 1;%å°çƒè´¨é‡    mass
+r  = 1;%å°çƒçš„åŠå¾„  rad
+g  = -1;%é‡åŠ›åŠ é€Ÿåº¦ acceleration of gravity
+k  = 40;%å¼¹ç°§çš„å¼¹æ€§ç³»æ•° stiffness
+t  = 0;%èµ·å§‹æ—¶é—´ inital time
+dt = 0.02;%å•ä½æ—¶é—´ it is too big now, just for fun!
+v  = 0;%å°çƒçš„åˆå§‹é€Ÿåº¦ disk's inital velocity
+y1 = 2;%å°çƒçš„èµ·å§‹ä½ç½® disk's inital position
+y0 = 0;%åœ°é¢çš„ä½ç½® ground
+viscous = 0;%ç²˜æ»è¡°å‡ç³»æ•°
 F = m*g; %gravity
 
 filename='a_free_falling_disk.gif';
@@ -59,6 +59,7 @@ for i=1:300
     hold on;
     grid on;
     plot(t,y1,'r*')
+    axis([0 6 -1 3])
     legend('disk''s position') 
 
     %write to gif
